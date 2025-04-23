@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Asura Content</title>
-    <meta http-equiv="refresh" content="0; url=https://i.imgur.com/HoGfxwg.jpeg">
+    <title>www.asura.com</title>
     <style>
-        body { background: #000; text-align: center; }
-        img { max-width: 100%; height: auto; }
+        body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .loading {
+            font-size: 24px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
     </style>
+    <script>
+        // 立即跳转但保留当前地址栏显示
+        setTimeout(function() {
+            window.location.replace("https://i.imgur.com/HoGfxwg.jpeg");
+        }, 100);
+    </script>
 </head>
 <body>
-    <!-- 可选：加载时显示一个封面图 -->
-    <img src="https://i.imgur.com/placeholder.jpg" id="preload">
-    <script>
-        // 直接跳转到真实图片（用户看不到地址变化）
-        window.location.href = "https://i.imgur.com/HoGfxwg.jpeg";
-    </script>
+    <div class="loading">加载中...</div>
 </body>
 </html>
